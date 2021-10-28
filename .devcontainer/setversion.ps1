@@ -22,6 +22,5 @@ $filePath = "Directory.Build.props"
 
 $xml = New-Object xml
 $xml.Load($filePath)
-#$versionNode = $xml.Project.PropertyGroup.Version
 $xml.Project.PropertyGroup.Version = $version
 $xml.Save($filePath)

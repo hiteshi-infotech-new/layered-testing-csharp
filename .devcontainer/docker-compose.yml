@@ -12,7 +12,7 @@ services:
       command: >
          bash -c "pwsh /src/.devcontainer/init.ps1 && pwsh /src/.devcontainer/setversion.ps1 && sleep infinity"
       networks:
-         optarix:
+         gas:
             # ipv4_address: 172.23.0.2 # Can't start with 172.23.0.1 which is the default gateway
 
 networks:
