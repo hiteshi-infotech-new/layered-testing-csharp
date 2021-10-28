@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Gas
 {
-   public class LegacyCalculator
+   public partial class LegacyCalculator
    {
       public IPlannedStart Calculate(List<DateTime> dates, int requiredDays = 1)
       {
@@ -40,17 +40,5 @@ namespace Gas
          }
          return plannedStart;
       }
-
-      private class PlannedStart : IPlannedStart
-      {
-         public DateTime StartTime { get; set; }
-         public int Count { get; set; }
-      }
-   }
-
-   public interface IPlannedStart
-   {
-      public DateTime StartTime { get; set; }
-      public int Count { get; set; }
    }
 }
