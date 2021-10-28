@@ -2,7 +2,7 @@
 
 ## The Task
 
-This repository contains a tiny fragment of a real-life project. We have changes class and interface names to protect the real project. The code is in C# using .NET 5.0.
+This repository contains a tiny fragment of a real-life project. We have changed class and interface names to protect the real project. The code is in C# using .NET 5.0.
 
 You have been asked to have a look at class `LegacyCalculator` and find ways for how its implementation could be improved. You are given a time box of 1 hour.
 
