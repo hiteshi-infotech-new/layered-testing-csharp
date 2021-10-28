@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+   layered-testing:
+      container_name: layered-testing-dev
+      hostname: layered-testing-dev.local
+      build:
+         context: .
+      working_dir: /src
+      volumes:
+         - ..:/src:cached
+      command: >
+         bash -c "pwsh /src/.devcontainer/init.ps1 && pwsh /src/.devcontainer/setversion.ps1 && sleep infinity"
+      networks:
+         optarix:
+            # ipv4_address: 172.23.0.2 # Can't start with 172.23.0.1 which is the default gateway
+
+networks:
+   gas:
+      # ipam:
+      #    driver: default
+      #    config:
+      #       - subnet: "172.23.0.0/16"
